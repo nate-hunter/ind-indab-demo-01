@@ -54,7 +54,7 @@ const Login = () => {
           </div>
 
           <button type="submit" style={loginStyle.formBtn} disabled>Submit</button>
-          <p style={{ color: 'red', fontStyle: 'oblique', marginTop: '15px', textAlign: "center" }}>(The form is not active)</p>
+          <p style={{ color: 'red', fontStyle: 'oblique', marginTop: '15px', textAlign: "center" }}>(Form not functional)</p>
         </form>
       </div>
     </div>

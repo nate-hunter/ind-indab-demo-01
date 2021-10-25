@@ -20,7 +20,8 @@ const homeStyle = {
   },
   contentItemContainer: {
     width: '650px',
-    // backgroundColor: 'slateblue'
+    marginTop: '15px'
+    // backgroundColor: 'slateblue',
   },
   contentLabel: {
     textAlign: 'center',
