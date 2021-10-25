@@ -1,7 +1,7 @@
 # iNDAB Menu / Dashboard
 
-## To Begin:
+### To Begin:
 
-### `npm install`
+#### `npm install`
 
-### `npm start`
+#### `npm start`
