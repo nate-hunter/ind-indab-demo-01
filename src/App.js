@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from "react-router-dom";
+
+import Sidebar from './components/Sidebar';
+import Topbar from './components/Topbar';
+import Home from './pages/home';
+import Login from './pages/login';
+import AssetMgmt from "./pages/assetMgmt";
+import BillingProcessing from "./pages/billingProcessing";
+import PartnerResources from "./pages/partnerResources";
+import Loading from "./pages/loading";
+
+const appStyle = {
+  container: {
+    display: 'flex',
+    // marginTop: '15px',
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Topbar />
+      <div style={appStyle.container}>
+        <Sidebar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/account/login" component={Login} />
+          <Route path="/assetMgmt" component={AssetMgmt} />
+          <Route path="/billing" component={BillingProcessing} />
+          <Route path="/partnerResources" component={PartnerResources} />
+          <Route path="/loading" component={Loading} />
+        </Switch>
+      </div>
+    </>
   );
 }
 
